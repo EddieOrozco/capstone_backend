@@ -1,6 +1,6 @@
 class Api::CarsController < ApplicationController
   def index
-    @car = Car.first
+    @cars = Car.all
     render "index.json.jb"
   end
 end
