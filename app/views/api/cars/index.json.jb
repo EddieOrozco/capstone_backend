@@ -1,6 +1,5 @@
-result = []
-@cars.each do |car|
-  result << {
+@cars.map do |car|
+  {
     id: car.id,
     seller_id: car.seller_id,
     make: car.make,
