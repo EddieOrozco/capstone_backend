@@ -3,4 +3,9 @@ class Api::CarsController < ApplicationController
     @cars = Car.all
     render "index.json.jb"
   end
+
+  def show
+    @model = params["model"]
+    render "show.json.jb"
+  end
 end
