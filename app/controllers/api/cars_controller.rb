@@ -6,7 +6,7 @@ class Api::CarsController < ApplicationController
 
   def create
     @car = Car.new(
-      seller_id: 2,
+      seller_id: current_user.id,
       make: params[:make],
       model: params[:model],
       year: params[:year],
@@ -29,5 +29,11 @@ class Api::CarsController < ApplicationController
     @car.color = params[:color] || @car.color
     @car.save
     render "show.json.jb"
+  end
+
+  def destroy
+    @car = Car.find_by(id: params[:id])
+    @car.destroy
+    render json: { message: "Car was deleted!" }
   end
 end
