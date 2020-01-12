@@ -1,7 +1,16 @@
 class Api::CarsController < ApplicationController
   def index
-    @cars = Car.all
-    render "index.json.jb"
+    if current_user
+      @cars = Car.where(seller_id: current_user.id)
+      if params[:search]
+        @cars = @cars.where("make ILIKE ?", "%#{params[:search]}%")
+      end
+
+      @cars = @cars.order(:id => :asc)
+      render "index.json.jb"
+    else
+      render json: []
+    end
   end
 
   def create
@@ -12,8 +21,12 @@ class Api::CarsController < ApplicationController
       year: params[:year],
       color: params[:color],
     )
-    @car.save
-    render "show.json.jb"
+
+    if @car.save
+      render "show.json.jb"
+    else
+      render json: { errors: @car.errors.full_messages }, status: 422
+    end
   end
 
   def show
@@ -27,8 +40,11 @@ class Api::CarsController < ApplicationController
     @car.model = params[:model] || @car.model
     @car.year = params[:year] || @car.year
     @car.color = params[:color] || @car.color
-    @car.save
-    render "show.json.jb"
+    if @car.save
+      render "show.json.jb"
+    else
+      render json: { errors: @car.errors.full_messages }, status: 422
+    end
   end
 
   def destroy
