@@ -1,6 +1,7 @@
 @cars.map do |car|
   {
     id: car.id,
+    buyer_id: car.buyer_id,
     seller_id: car.seller_id,
     make: car.make,
     model: car.model,

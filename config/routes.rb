@@ -3,6 +3,7 @@ Rails.application.routes.draw do
     get "/users" => "users#index"
     post "/users" => "users#create"
     get "/users/:id" => "users#show"
+    delete "/users/:id" => "users#destroy"
 
     post "/sessions" => "sessions#create"
 
@@ -11,5 +12,7 @@ Rails.application.routes.draw do
     get "/cars/:id" => "cars#show"
     patch "/cars/:id" => "cars#update"
     delete "/cars/:id" => "cars#destroy"
+
+    post "/messages" => "messages#create"
   end
 end

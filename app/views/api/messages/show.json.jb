@@ -1,0 +1,5 @@
+{
+  text: @message.text,
+  reciver_id: @message.receiver_id,
+  car_id: @message.car_id,
+}

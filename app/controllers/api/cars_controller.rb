@@ -35,7 +35,8 @@ class Api::CarsController < ApplicationController
   end
 
   def update
-    @car = Car.find_by(id: params[:id])
+    @car = current_user.selling_cars.find_by(id: params[:id])
+    @car.buyer_id = params[:buyer_id] || @car.buyer_id
     @car.make = params[:make] || @car.make
     @car.model = params[:model] || @car.model
     @car.year = params[:year] || @car.year
