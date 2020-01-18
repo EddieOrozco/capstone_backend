@@ -3,5 +3,21 @@
   name: @user.name,
   email: @user.email,
   phone: @user.phone,
-  shop_id: @user.shop_id,
+  shop: @user.shop,
+  selling_cars: @user.selling_cars.map do |car|
+    {
+      id: car.id,
+      buyer: car.buyer,
+      make: car.make,
+      model: car.model,
+      year: car.year,
+      color: car.color,
+      interior_color: car.interior_color,
+      car_condition: car.car_condition,
+      requests: car.requests,
+    }
+  end,
+  bought_cars: @user.bought_cars,
+  received_messages: @user.received_messages,
+# requests: @user.requests,
 }

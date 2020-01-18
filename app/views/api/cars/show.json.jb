@@ -17,4 +17,5 @@
   tires: @car.tires,
   rims: @car.rims,
   car_description: @car.car_description,
+  main_image: @car.main_image,
 }

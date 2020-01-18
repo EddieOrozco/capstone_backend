@@ -1,9 +1,10 @@
 class Api::MessagesController < ApplicationController
   def create
+    car = Car.find_by(id: params[:car_id])
     @message = Message.new(
       text: params[:text],
       sender_id: current_user.id,
-      receiver_id: params[:receiver_id],
+      receiver_id: car.seller_id,
       car_id: params[:car_id],
     )
 

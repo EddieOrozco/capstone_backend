@@ -1,16 +1,18 @@
 class Api::CarsController < ApplicationController
   def index
-    if current_user
-      @cars = Car.where(seller_id: current_user.id)
-      if params[:search]
-        @cars = @cars.where("make ILIKE ?", "%#{params[:search]}%")
-      end
+    # if current_user
+    #   @cars = Car.where(seller_id: current_user.id)
+    #   if params[:search]
+    #     @cars = @cars.where("make ILIKE ?", "%#{params[:search]}%")
+    #   end
 
-      @cars = @cars.order(:id => :asc)
-      render "index.json.jb"
-    else
-      render json: []
-    end
+    #   # render "index.json.jb"
+    # else
+    #   # render json: []
+    #   @cars = Car.all
+    # end
+    @cars = Car.all.order(:id => :asc)
+    render "index.json.jb"
   end
 
   def create
