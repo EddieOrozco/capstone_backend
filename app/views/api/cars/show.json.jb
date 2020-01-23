@@ -18,4 +18,5 @@
   rims: @car.rims,
   car_description: @car.car_description,
   main_image: @car.main_image,
+  is_seller: current_user && current_user.id == @car.seller_id,
 }
