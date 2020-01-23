@@ -15,8 +15,13 @@ Car.create!(seller_id: 1, buyer_id: 4, make: "Cadillac", model: "Eldorado", year
 Car.create!(seller_id: 2, buyer_id: 4, make: "Pontiac", model: "Trans AM ", year: "1977", color: "black & Gold", interior_color: "dark red", car_condition: "bad", location: "Hammond, IN", engin_size: "V-8", transmission_type: "4 speed", exhaust: "Pypes SGF70 Crossflow System", mileage: "78123", price: 32000, tires: "BF Goodrich", rims: "Original", car_description: "The car is in bad condition. Has some rust, needs new paint. Will start but will not drive unless it is warmed up. Has new tires but rims are scratched. This car was used for racing and does not have all the original parts.")
 
 Car.create!(seller_id: 2, buyer_id: 3, make: "International ", model: "Harvester", year: "1951", color: "brown", interior_color: "dark blue", car_condition: "bad", location: "Chicago, IL", engin_size: "V-6", transmission_type: "4 speed", exhaust: "none", mileage: "129000", price: 9899, tires: "Continental", rims: "Rust Metal", car_description: "This truck needs everything restored. Truck seats are pealing, needs new paint, rims and tires need to be replaced. Does not have a trunk. Exhaust sytem has holes. Will except traids bids.")
-Car.create!(seller_id: 1, buyer_id: 4, make: "Pontiac", model: "GTO", year: "1976", color: "black & Gold", interior_color: "dark red", car_condition: "Good", location: "Chicago, IL", engin_size: "V-8", transmission_type: "4 speed", exhaust: "Pypes SGF70 Crossflow System", mileage: "73123", price: 20000, tires: "BF Goodrich", rims: "Original", car_description: "Has new tires but rims are scratched. This car was used for racing and does not have all the original parts.")
+Car.create!(seller_id: 1, buyer_id: 4, make: "Pontiac", model: "GTO  Judge", year: "1969", color: "black & Gold", interior_color: "dark red", car_condition: "Good", location: "Chicago, IL", engin_size: "V-8", transmission_type: "4 speed", exhaust: "Pypes SGF70 Crossflow System", mileage: "73123", price: 20000, tires: "BF Goodrich", rims: "Original", car_description: "Has new tires but rims are scratched. This car was used for racing and does not have all the original parts.")
 Car.create!(seller_id: 1, buyer_id: 4, make: "Doge", model: "Challenger", year: "1970", color: "black", interior_color: "dark red", car_condition: "Good", location: "Chicago, IL", engin_size: "V-8", transmission_type: "4 speed", exhaust: "Pypes SGF70 Crossflow System", mileage: "12233", price: 30000, tires: "Goodyear", rims: "Original", car_description: "Has new tires but rims are scratched. This car was used for racing and does not have all the original parts.")
+Car.create!(seller_id: 2, buyer_id: 4, make: "Pontiac", model: "Catalina", year: "1965", color: "black", interior_color: "dark red", car_condition: "Good", location: "Chicago, IL", engin_size: "V-8", transmission_type: "4 speed", exhaust: "Pypes SGF70 Crossflow System", mileage: "12233", price: 30000, tires: "Goodyear", rims: "Original", car_description: "Has new tires but rims are scratched. This car was used for racing and does not have all the original parts.")
+Car.create!(seller_id: 1, buyer_id: 4, make: "Ford", model: "Mustang Shelby GT500", year: "1968", color: "black", interior_color: "dark red", car_condition: "Good", location: "Chicago, IL", engin_size: "V-8", transmission_type: "4 speed", exhaust: "Pypes SGF70 Crossflow System", mileage: "12233", price: 30000, tires: "Goodyear", rims: "Original", car_description: "Has new tires but rims are scratched. This car was used for racing and does not have all the original parts.")
+Car.create!(seller_id: 1, buyer_id: 4, make: "Plymouth", model: "Road Runner", year: "1968", color: "black", interior_color: "dark red", car_condition: "Good", location: "Chicago, IL", engin_size: "V-8", transmission_type: "4 speed", exhaust: "Pypes SGF70 Crossflow System", mileage: "12233", price: 30000, tires: "Goodyear", rims: "Original", car_description: "Has new tires but rims are scratched. This car was used for racing and does not have all the original parts.")
+Car.create!(seller_id: 2, buyer_id: 4, make: "Ford", model: "Torino Cobra", year: "1970", color: "black", interior_color: "dark red", car_condition: "Good", location: "Chicago, IL", engin_size: "V-8", transmission_type: "4 speed", exhaust: "Pypes SGF70 Crossflow System", mileage: "12233", price: 30000, tires: "Goodyear", rims: "Original", car_description: "Has new tires but rims are scratched. This car was used for racing and does not have all the original parts.")
+Car.create!(seller_id: 2, buyer_id: 4, make: "Ford", model: "Torino Cobra", year: "1970", color: "black", interior_color: "dark red", car_condition: "Good", location: "Chicago, IL", engin_size: "V-8", transmission_type: "4 speed", exhaust: "Pypes SGF70 Crossflow System", mileage: "12233", price: 30000, tires: "Goodyear", rims: "Original", car_description: "Has new tires but rims are scratched. This car was used for racing and does not have all the original parts.")
 
 Image.create!(url: "https://www.admcars.com/galleria_images/432/432_main_l.jpg", car_id: 1)
 Image.create!(url: "https://www.admcars.com/galleria_images/432/432_p10_f.jpg", car_id: 1)
@@ -28,10 +33,17 @@ Image.create!(url: "https://cdn.bringatrailer.com/wp-content/uploads/2018/09/197
 Image.create!(url: "https://i.pinimg.com/originals/82/45/18/8245180c7c6904da30e3fda78c42cc70.jpg", car_id: 3)
 Image.create!(url: "https://i.pinimg.com/originals/c2/ac/b1/c2acb1268d6501419bc386750866a35f.jpg", car_id: 4)
 Image.create!(url: "https://www.mad4wheels.com/img/free-car-images/mobile/12011/pontiac-firebird-trans-am-bandit-1977-370215.jpg", car_id: 4)
-Image.create!(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhHpSYcXqd_-bAOp2I-dlLZRA4CRzoYkfDXcNKjG9Qw7Kv-fnQ&s", car_id: 6)
-Image.create!(url: "https://i.pinimg.com/originals/25/0c/07/250c07345d0e873dadd263616308494c.jpg", car_id: 8)
-Image.create!(url: "https://cdn04.carsforsale.com/3/351989/31101413/thumb/1437337509.jpg", car_id: 15)
-Image.create!(url: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRS3SszM5sPUYuvDAb1BUY8409gm-l8Lf_fpnW9p9-BiB-gdVObLg&s", car_id: 12)
+Image.create!(url: "https://www.oldride.com/imgitem//81151/212134/88183023275000_tmp_max_640X480.jpg", car_id: 5)
+Image.create!(url: "https://cdn.dealeraccelerate.com/rkm/1/5321/381665/1920x1440/1970-pontiac-gto", car_id: 6)
+Image.create!(url: "https://cdn1.mecum.com/auctions/fl0116/fl0116-229823/images/fl0116-229823_1@2x.jpg?1451424535000", car_id: 7)
+Image.create!(url: "https://barnfinds.com/wp-content/uploads/2018/08/Catalina9-e1534964911121.jpg", car_id: 8)
+Image.create!(url: "https://barnfinds.com/wp-content/uploads/2019/10/1968-Ford-Mustang-Shelby-GT500-Photo-1-e1572154155651-630x390.jpg", car_id: 9)
+
+Image.create!(url: "https://cdn.dealeraccelerate.com/ideal/1/546/16520/1920x1440/1968-plymouth-road-runner", car_id: 10)
+
+Image.create!(url: "https://www.hotrod.com/uploads/sites/21/2018/11/001-chencharick-1970-ford-torino-cobra-jet-front-three-quarter-alt-1.jpg", car_id: 11)
+
+Image.create!(url: "https://i.pinimg.com/originals/25/0c/07/250c07345d0e873dadd263616308494c.jpg", car_id: 12)
 
 Message.create!(text: "Is the price negotiable?", sender_id: 3, receiver_id: 1, car_id: 2)
 
